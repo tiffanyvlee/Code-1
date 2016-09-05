@@ -35,7 +35,7 @@ void draw() {
         ellipse(400, 700, 50, 50);
     //inner circles
     fill(200, 100, 100);
-      //4 count cirlces
+      //4 count circles
         ellipse(85, 400, 10, 10);
         ellipse(400, 85, 10, 10);
         ellipse(715, 400, 10, 10);
