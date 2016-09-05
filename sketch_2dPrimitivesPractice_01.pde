@@ -1,8 +1,8 @@
   //draw: 
-    //create border with 8 squares stacked equadistantly, tl corners rounded 1 pi (looks indented inwards), br corners rounded   
-    //9x9 strips/rectangles woven perpendicularly and spaced equidistantly, centered in the middle of the page within the border
-    //one large circle centered behind the woven rectangles
-    //one small circle with another smaller circle stacked above it centered on top of woven rectangles
+    //create border with 8 squares stacked equadistantly, tl corners rounded 1 pi (looks indented inwards), br corners rounded (8 squares total)   
+    //9x9 rectangles woven perpendicularly and spaced equidistantly, centered in the middle of the page within the border (18 rectangles total)
+    //one large circle centered behind the woven rectangles (1 circle total)
+    //one small circle with another smaller circle stacked above it centered on top of woven rectangles (2 circles total)
 
 
 void setup(){
