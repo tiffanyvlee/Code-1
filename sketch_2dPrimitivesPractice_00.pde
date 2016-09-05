@@ -1,4 +1,9 @@
-//simple triangle, quad, line practice
+//triangle, quad, line 2d primitive practice
+  //1 small right isosceles triangle at each corner with hypotenuse facing towards center (4 triangles total)
+  //1 trapezoid in between every triangles at corners (4 trapezoids total)
+  //1 large up-side-down isosceles triangle with a smaller scale triangle center stacked on top of it at the top half of the page, hypotenuse facing top of the page (2 triangles total)
+  //1 large right-side-up isosceles triangle with a smaller scale triangle center stacked on top of it at the bottom half of the page, hypotenuse facing bottom of the page (2 triangles total)
+  //6 vertical lines gradually getting shorter as it nears the center, spread equidistantly in empty triangle-like space left on the right side of page. mirror on the left side of page (12 lines total)
 
 void setup(){
   size(400, 400);
