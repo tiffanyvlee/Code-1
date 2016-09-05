@@ -1,4 +1,4 @@
-//triangle, quad, line 2d primitive practice
+//draw:
   //1 small right isosceles triangle at each corner with hypotenuse facing towards center (4 triangles total)
   //1 trapezoid in between every triangles at corners (4 trapezoids total)
   //1 large up-side-down isosceles triangle with a smaller scale triangle center stacked on top of it at the top half of the page, hypotenuse facing top of the page (2 triangles total)
