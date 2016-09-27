@@ -24,10 +24,6 @@ void setup() {
   
   size (600, 600);
   background (100, 0, 100);
-  
-  //  ellipseX = width/2;
-  //ellipseY = height/2;
-  //ellipseSize = 100;
 
 //ellipse
   x = width/2;
