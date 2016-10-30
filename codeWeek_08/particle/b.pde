@@ -7,31 +7,31 @@ class Particle {
   float s;
   float t;
   float life;
+  PImage smoke;
+  float r;
 
   //constructor
   Particle(float _x, float _y) {
     x = _x;
     y = _y;
-    dx = random(-3, 3);
-    dy = random(-3, 3);
-    c = color(0, random(50, 100), random(200, 255));
-    s = random(1, 5);
-    t = random(6, 10);
-    println("created a ball!");
-    life = 15;
+    dx = random(0, 200);
+    dy = random(0, 200);
+    s = random(50, 120);
+    t = random(50, 120);
+    r = random (10, 100);
+    life = 5;
+    smoke = loadImage("smoke.png");
   }
 
+
   void display() {
-    noStroke();
-    fill(c);
-    ellipse(x, y, s, t);
+         image(smoke, s, t);
   }
 
   void update() {
     life--;
-    s = map(life, 60, 0, 50, 0);
+       s = map(life,10, 250, 210, 250);
     
-    //c = color(map(dist(mouseX,mouseY,x,y),0,100,255,0));
     if (x < s/2 || x > width-s/2) {
       dx *= -1;
       x += dx;
@@ -49,5 +49,8 @@ class Particle {
   
   void setSize(float siz) {
     s = siz;
+
   }
+  
+  
 }

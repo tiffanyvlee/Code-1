@@ -1,12 +1,23 @@
+import processing.pdf.*;
+boolean saveOneFrame = false;
+
 PImage kendrick;
+
 
 void setup() {
   size(500, 500);
   kendrick = loadImage("kendrick.png");
   noStroke(); 
+  
+  frameRate(24);
 }
 
+
 void draw() {
+  if (saveOneFrame == true) {
+    beginRecord(PDF, "frame-####.pdf");
+  }
+  
   background(0);
   
   int widthStep = 4;
@@ -22,4 +33,14 @@ void draw() {
       ellipse(i + 2, j + 2, r, r);
     }
   }
+  
+  if (saveOneFrame == true){
+    endRecord();
+    saveOneFrame = false;
+  }
+}
+
+
+void mousePressed() {
+  saveOneFrame = true;
 }
