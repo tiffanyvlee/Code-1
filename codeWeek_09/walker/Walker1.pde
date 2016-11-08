@@ -1,8 +1,5 @@
-
 class Walker1 {
-
   float x, y, xStep, yStep, siz;
-
 
   Walker1(float x, float y) {
     this.x = x;
@@ -13,15 +10,17 @@ class Walker1 {
     img = loadImage("zombster.png");
   }
 
+
   void display() {
     tint(255, 100);
     img.resize(40, 40);
     image(img, x, y);
   }
 
+
   void move() {
-    int rand = (int)random(10);
-    switch (rand) {
+    int random = (int)random(10);
+    switch (random) {
     case 0:
       x-=xStep;
       break;

@@ -9,22 +9,22 @@ class Walker2 {
     this.siz = 2;
     this.xStep = this.siz * 20;
     this.yStep = this.siz * 20;
-        img = loadImage("sock1.png");
+    img = loadImage("sock1.png");
   }
+
 
   void display() {
+    rot+=10;
     pushMatrix();
-   translate (width/2, height/2);
-
-    img.resize(40, 40);
-    tint(255, 50);
-     rot+=10;
-    rotate(radians(rot));
-    image(img, x, y);
-
-    popMatrix();
-    
+      translate (width/2, height/2);
+      
+      tint(255, 50);
+      rotate(radians(rot));
+      img.resize(40, 40);
+      image(img, x, y);
+    popMatrix();   
   }
+
 
   void move() {
     int rand = (int)random(10);
