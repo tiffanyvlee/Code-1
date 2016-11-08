@@ -1,45 +1,43 @@
 class Particle2 {
   float x, y;
   float s;
-  float a;
   float lifetime;
   float xDir, yDir;
-  PImage sock;
-  
-  Particle2(float _x, float _y) {
-    x = _x;
-    y = _y;
-  s=10;
-    a = 40;
-    lifetime = 100;
-    xDir = random(-2,2);
-    yDir = random(0,2);
+  PVector pos1, pos2;
+  PVector vel1, vel2;
+  PVector acc1, acc2;
+
+
+  Particle2(float x, float y) {
+    pos1 = new PVector(x, y);
+    vel1 = PVector.random2D();
+    vel1.setMag(12);
+    acc1 = new PVector(-0.05, 0.5);
     
-    tint(255, 150);
-    imageMode(CENTER);
-    sock = loadImage("sock1.png");
+    pos2 = new PVector(x, y);
+    vel2 = PVector.random2D();
+    vel2.setMag(12);
+    acc2 = new PVector(0.05, -0.5);
+    
+    s = 10;
+    lifetime = 120;
   }
   
   void update() {
     lifetime--;
-    y-=yDir*2;
-    x+=xDir*2;
+    pos1 = pos1.add(vel1);
+    vel1 = vel1.add(acc1);
     
-
-    s = map(mouseY, 0, height, 10, 60);
-    
-    if (a > 0) {
-      a-=0.5;
-    }
-
-    // change the size somehow
-  }
+    pos2 = pos2.add(vel2);
+    vel2 = vel2.add(acc2); 
   
+    s = map(mouseY, 0, height, 2, 15);
+  }
+    
+    
   void display() {
-    fill(map(mouseX, width, 0, 100, 255), 100, 100);
-
-    ellipse(x, y, s, s);
-
-
+    fill(map(mouseX, width, 0, 255, 50), 100, 100);
+    ellipse(pos1.x, pos1.y, s, s);
+    ellipse(pos2.x, pos2.y, s, s);
   }
 }
